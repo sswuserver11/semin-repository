@@ -1,0 +1,144 @@
+nav{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    margin: 20px 0 0 15px;
+}
+
+.login {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 30px;
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+.login a{
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+}
+
+.searching {
+    width:100%;
+    text-align: center;
+    margin: 10px;
+}
+
+.search__crew {
+    height: 45px;
+    width: 500px;
+    border: 2px solid rgb(230,227,227);
+}
+
+.search__bar button {
+    /* background-color: aqua; */
+    height: 40px;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid rgb(230,227,227);
+}
+
+main {
+    margin: 30px 80px; /*세로 가로*/
+}
+
+.top__title {
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.top__subtitle{
+    padding-top: 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+table{
+    width: 1000px;
+    border-collapse: collapse;  
+}
+
+.top__table {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width:400px;
+}
+
+.tabtitle{
+    background-color: rgb(153, 151, 151);
+}
+
+.crew__header{
+    padding-top: 25px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+
+.crew__title{
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.filter{
+    font-size: 26px;
+    font-weight: 800;
+    border-radius: 6px;
+    border:none;
+    cursor: pointer;
+}
+
+.crew__box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 100px;
+    margin: 50px 30px 0 30px;
+}
+
+.crewpost{
+    border:1px solid rgb(230,227,227);
+    border-radius: 6px;
+    box-shadow: 0 2px 2px 0 rgb(214,214,214);
+}
+
+.crew__img{
+    background-image: url("../img/poster.JPG");
+    height: 180px;
+    background-size: 100% 100%;
+}
+
+.crew__name{
+    margin:10px 0 10px 0;
+    font-size:30px;
+}
+
+.crew__like{
+    margin:10px 0 10px 0;
+    font-size:20px;
+    color: grey;
+}
+
+.watch__crew{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+}
+
+.btn-group{
+    padding-top: 70px;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-group button{
+    background-color: #5DE0FB;
+    color:white;
+    height: 35px;
+    width: 35px;
+    font-size: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid rgb(230,227,227);
+}
