@@ -4,6 +4,7 @@ nav{
     grid-template-columns: auto auto;
     justify-content: space-between;
     margin: 20px 0 0 15px;
+    border-bottom: 4px solid #6BB9ED;
 }
 /* 로그인 css */
 .login {
@@ -24,6 +25,7 @@ nav{
     width:100%;
     text-align: center;
     margin: 10px;
+    padding-bottom: 20px;
 }
 
 .search__crew {
@@ -147,6 +149,7 @@ table{
 }
 
 /* filtering.html페이지 */
+/* 필터링선택부분 */
 .filter_title{
     font-size: 26px;
     font-weight: 800;
@@ -172,3 +175,9 @@ table{
     color:black
 }
 
+/* 선택된 필터에 따라 정렬 */
+.show_title{
+    padding-top: 20px;
+    font-size: 26px;
+    font-weight: 800;
+}
