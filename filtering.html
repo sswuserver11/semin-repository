@@ -1,3 +1,4 @@
+<!-- 필터링페이지 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +10,7 @@
 </head>
 <body>
     <header>
+        <!-- 로고 및 로그인 부분 -->
         <nav>
             <img src="./img/logo.JPG" width="200" height="60">
             <span class="login">
@@ -17,18 +19,19 @@
             </span>
         </nav>
         <hr>
+        <!-- 필터링 선택부분 -->
         <section>
             <div class="filter_title">필터링</div>
             <div class="interest">
                 <p class="filter__subtitle">관심분야</p>
                 <dl class="list_division">
-                    <dt>
-                        <div class="selected">
-                            <a href="#">전체</a>
-                        </div>
-                    </dt>
                     <dd>
                         <ul>
+                            <li>
+                                <a href="#">
+                                    <span class="select_interest">전체</span>
+                                </a>
+                            </li>
                             <li>
                                 <a href="#">
                                     <span class="select_interest">문화/예술/공연</span>
@@ -72,13 +75,18 @@
             <div class="region">
                 <p class="filter__subtitle">활동지역</p>
                 <dl class="list_division">
-                    <dt>
-                        <div class="selected">
-                            <a href="#">전국</a>
-                        </div>
-                    </dt>
                     <dd>
                         <ul>
+                            <li>
+                                <a href="#">
+                                    <span class="select_interest">전국</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="select_interest">대면</span>
+                                </a>
+                            </li>
                             <li>
                                 <a href="#">
                                     <span class="select_interest">비대면</span>
@@ -119,22 +127,35 @@
                 </dl>
             </div>
             <hr>
-            <div class="sorting">
+            <div class="sorting__box">
                 <p class="filter__subtitle">정렬방식</p>
-                    <a href="#">
-                        <span class="division">최신순</span>
-                    </a>
-                    <a href="#">
-                        <span class="division">마감임박순</span>
-                    </a>
-                    <a href="#">
-                        <span class="division">인기순</span>
-                    </a>
+                <dl class="list_division">
+                    <dd>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <span class="division">최신순</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="division">마감임박순</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="division">인기순</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
             </div>
         </section>
     </header>
     <hr>
     <main>
+        <!-- 선택한 필터링에 의해 모집글 보여지는 부분 -->
         <section>
             <div class="show">모집글보기</div>
             <div class="crew__box">
@@ -207,7 +228,7 @@
             </div>
         </section>
         <section>
-            <!-- 여기도 동적변경 -->
+            <!-- 페이지 넘기기(여기도 동적변경) -->
             <div class="btn-group">
                 <button type="button"><</button>
                 <button type="button">1</button>

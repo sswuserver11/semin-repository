@@ -1,10 +1,11 @@
+/* 메인페이지시작(index.html) */
 nav{
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-between;
     margin: 20px 0 0 15px;
 }
-
+/* 로그인 css */
 .login {
     display: grid;
     grid-template-columns: auto auto;
@@ -18,7 +19,7 @@ nav{
     color: black;
     font-weight: 800;
 }
-
+/* 검색창 css */
 .searching {
     width:100%;
     text-align: center;
@@ -39,7 +40,7 @@ nav{
     cursor: pointer;
     border: 2px solid rgb(230,227,227);
 }
-
+/* main부분(인기모집동아리,동아리모집글부분) */
 main {
     margin: 30px 80px; /*세로 가로*/
 }
@@ -55,6 +56,7 @@ main {
     font-weight: 600;
 }
 
+/* 인기모집동아리 css */
 table{
     width: 1000px;
     border-collapse: collapse;  
@@ -70,6 +72,7 @@ table{
     background-color: rgb(153, 151, 151);
 }
 
+/* 동아리 모집글 css */
 .crew__header{
     padding-top: 25px;
     display: grid;
@@ -142,3 +145,30 @@ table{
     cursor: pointer;
     border: 2px solid rgb(230,227,227);
 }
+
+/* filtering.html페이지 */
+.filter_title{
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.filter__subtitle{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.list_division ul{
+    list-style-type: none;
+    padding:0;
+}
+
+.list_division li{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.list_division a {
+    text-decoration: none;
+    color:black
+}
+
