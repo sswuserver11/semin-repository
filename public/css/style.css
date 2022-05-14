@@ -6,6 +6,13 @@ nav{
     margin: 20px 0 0 15px;
     border-bottom: 4px solid #6BB9ED;
 }
+
+.logo {
+    border: 0;
+    background-color: white;
+    cursor: pointer;
+}
+
 /* 로그인 css */
 .login {
     display: grid;

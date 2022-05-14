@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <script src="js/javas.js"></script>
     <header>
         <!-- 로고 및 로그인부분 -->
         <nav>
-            <img src="img/logo.jpg" width="200" height="60">
+            <button type="button" class="logo" onclick="location.href='http://localhost/'"> <img src="img/logo.JPG" width="200" height="60"></button>
+            <!-- <img src="img/logo.jpg" width="200" height="60"> -->
             <span class="login">
                 <a href="#">마이페이지</a>
                 <a href="#">로그아웃</a>
@@ -101,7 +103,7 @@
         <section>
             <div class="crew__header">
                 <div class="crew__title">전체</div>
-                <button class="filter">필터링</button>
+                <button onclick="window.open('http://localhost/filter')" class="filter">필터링</button>
             </div>
             <div class="crew__box">
                 <div class="crewpost">
