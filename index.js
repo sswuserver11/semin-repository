@@ -1,9 +1,13 @@
 const express = require("express"),
-app = express(),
-layouts = require("express-ejs-layouts");
+layouts = require("express-ejs-layouts"),
+app = express();
 
+//ejs를 템플릿용으로 사용
+app.set("views", __dirname + "/views");
+app.engine("html", require("ejs").renderFile);
 app.set("view engine","ejs");
 app.set("port", process.env.PORT || 80);
+
 
 //url 인코드와 json파라미터 처리를 위한 body-parser사용
 app.use(
@@ -12,18 +16,17 @@ app.use(
     })
 );
 app.use(express.json());
-
+//express.js가 이 패키지를 추가 미들웨어로 사용하도록
 app.use(layouts);
 app.use(express.static(__dirname+"/public"));
 
-
 //홈페이지를 위한 라우트 생성
-app.get("/",(req,res)=>{
-    res.sendFile(__dirname + "/views/index.html")
+app.get("",(req,res)=>{
+    res.render("index");
 });
 
 app.get("/filter",(req,res)=>{
-    res.sendFile(__dirname + "/views/filtering.html")
+    res.render("filter")
 });
 
 app.listen(app.get("port"), () => {
