@@ -4,7 +4,6 @@ app = express();
 
 //ejs를 템플릿용으로 사용
 app.set("views", __dirname + "/views");
-app.engine("html", require("ejs").renderFile);
 app.set("view engine","ejs");
 app.set("port", process.env.PORT || 80);
 
@@ -20,11 +19,12 @@ app.use(express.json());
 app.use(layouts);
 app.use(express.static(__dirname+"/public"));
 
-//홈페이지를 위한 라우트 생성
-app.get("",(req,res)=>{
+//메인홈페이지를 위한 라우트 생성
+app.get("/",(req,res)=>{
     res.render("index");
 });
 
+//필터링페이지를 위한 라우트 생성
 app.get("/filter",(req,res)=>{
     res.render("filter")
 });

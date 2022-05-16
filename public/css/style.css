@@ -13,7 +13,7 @@ nav{
     cursor: pointer;
 }
 
-/* 로그인 css */
+/* 로그인 세션유지 헤더 css */
 .login {
     display: grid;
     grid-template-columns: auto auto;
@@ -27,6 +27,23 @@ nav{
     color: black;
     font-weight: 800;
 }
+
+/* 로그아웃 헤더 css */
+.logout {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 30px;
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+.logout a{
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+}
+
+
 /* 검색창 css */
 .searching {
     width:100%;
