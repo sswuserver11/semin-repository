@@ -1,16 +1,16 @@
-// exports.showMyPage = (req, res) => {
-//     res.render("myPage");
-// };
+exports.showmain = (req,res) => {
+     res.render("index");
+ };
 
-// exports.showAppliedMember = (req, res) => {
-//     res.render("applied_member");
-// };
+ exports.filterpage = (req,res) => {
+     res.render("filter");
+ };
 
-// exports.showPasswordSearch = (req, res) => {
-//     res.render("passwordSearch");
-// };
+ exports.loginpage = (req,res) => {
+     res.render("crewpass_login");
+ };
 
-// exports.postedPasswordChanged = (req, res) => {
+ 
+const db = require("../models/index"),
+crew_info = db.crew_info;
 
-//     res.render("passwordChanged");
-// };
