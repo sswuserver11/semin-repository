@@ -21,9 +21,10 @@
                     <td>동아리명</td>
                     <td>좋아요수</td>
                 </tr>
+                <% crewinfoes.forEach(crewinfo => { %> 
                 <tr>
                     <td>1</td>
-                    <td></td>
+                    <td><% crewinfo.crew_name %></td>
                     <td></td>
                 </tr>
                 <tr>
@@ -71,7 +72,7 @@
                     <td></td>
                     <td></td>
                 </tr>
-                
+                <% }); %>
             </table>
         </div>
     </section>
