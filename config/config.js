@@ -1,10 +1,4 @@
-// const path = require('path')
-// const dotenv = require('dotenv')
-
-// dotenv.config({path: path.join(__dirname, './.env')})
-const dotenv = require("dotenv");
-dotenv.config();
-
+require('dotenv').config();
 module.exports = {
   "development": {
     "username": process.env.DB_USER,

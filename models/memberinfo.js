@@ -1,27 +1,26 @@
-module.exports = (sequelize, Sequelize) => {
-const memberinfo = sequelize.define("memberinfo", {
-        email: {
-            type: Sequelize.STRING,
-            primaryKey: true
+module.exports=(sequelize, Sequelize)=>{
+    const Member=sequelize.define("memberinfo",{
+        email:{
+            type:Sequelize.STRING(40),
+            primaryKey:true
         },
-        password: {
-            type: Sequelize.STRING
+        password:{
+            type:Sequelize.STRING(20)
         },
-        name: {
-            type: Sequelize.STRING
+        name:{
+            type:Sequelize.STRING(10)
         },
-        birth: {
-            type: Sequelize.DATEONLY
+        birth:{
+            type:Sequelize.DATE
         },
-        phone_numb: {
-            type: Sequelize.STRING
-        },
-        sex: {
-            type: Sequelize.CHAR
+        phone_numb:{
+            type:Sequelize.STRING(11)
         }
-    },
-    {
-        timestamps: false //삽입이 된 엔티티가 언제 생성되고 언제 업뎃됐는지 관련 컬럼이 추가되는데 필요없으므로 false로 
+    },{ //기본코드
+        sequelize,
+        modelName:'memberinfo', //DB 속 테이블명과 동일할 것
+        freezeTableName:true, //DB에 테이블을 생성할 때, 위 modelName 뒤에 s를 붙여 테이블 생성하는 것을 방지
+        timestamps:false //createdAt, updateAt 속성이 생성됨을 방지
     });
-    return memberinfo;
-}
+    return Member;
+};

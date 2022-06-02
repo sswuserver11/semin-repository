@@ -1,10 +1,10 @@
 //이걸 controller에서 불러와야됨
 'use strict';
 
-// const fs = require('fs');
-// const path = require('path');
+const fs = require('fs');
+const path = require('path');
 const Sequelize = require('sequelize');
-// const basename = path.basename(__filename);
+const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development'; //node_env가 development,production임
 const config = require(__dirname + '/../config/config.js')[env];
 const db = {};

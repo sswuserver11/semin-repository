@@ -1,15 +1,15 @@
-const { Router } = require("express");
-
 const express = require("express"),
 layouts = require("express-ejs-layouts"),
 app = express(),
 router = require('express').Router(),
 homeController = require("./controllers/homeController"),
-crewinfoController = require("./controllers/crewinfoController"),
+memberSubmitController = require("./controllers/memberSubmitController"),
 errorController = require("./controllers/errorController"),
 db = require("./models/index"),
-    Sequelize = db.Sequelize;
+    Sequelize = db.Sequelize,
+    Op=Sequelize.Op;
 
+// db.sequelize.sync();
 //ejs를 템플릿용으로 사용
 app.set("views", __dirname + "/views");
 app.set("view engine","ejs");
@@ -28,11 +28,15 @@ router.use(layouts);
 router.use(express.static(__dirname+"/public"));
 
 router.get("/",homeController.showmain);
+router.get("/detail",homeController.detailpage);
 router.get("/filter",homeController.filterpage);
 router.get("/login",homeController.loginpage);
-router.get("/login/join",homeController.joinpage);
-// router.use(errorController.pageNotFoundError);
-// router.use(errorController.internalServerError);
+//컨트롤러-회원가입
+router.get("/memberSubmit",memberSubmitController.showmemberSubmit);
+router.post("/memberSubmit", memberSubmitController.saveMember);
+//컨트롤러-에러시
+router.use(errorController.pageNotFoundError);
+router.use(errorController.internalServerError);
 
 app.use("/",router);//루트로 들어오면 router로 연결시켜줌
 

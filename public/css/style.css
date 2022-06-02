@@ -281,7 +281,7 @@ input[type=submit]{
     margin: 0 auto;
     border: hidden;
 }
-.inputs{
+.joininputs{
     width:50%;
     height:30px;
     margin:auto;
@@ -291,4 +291,16 @@ input[type=submit]{
 width:15%;
 margin:auto;
 display:block;
+}
+
+/* 모집글상세보기 */
+.crew_info{
+    margin-left: 5%;
+}
+
+.crew_detail_info{
+    width: 90%;
+    height: 400px;
+    margin-left:5%;
+    margin-right:5%;
 }

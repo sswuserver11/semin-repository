@@ -56,10 +56,9 @@ exports.showmain = (req,res) => {
      res.render("crewpass_login");
  };
 
- exports.joinpage = (req,res) => {
-     res.render("memberSubmit");
- }
-
+ exports.detailpage = (req,res) => {
+     res.render("crew_detail");
+ };
 
 
  
