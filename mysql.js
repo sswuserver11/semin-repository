@@ -16,7 +16,12 @@ let test = async () => {
         insecureAuth: true
     });
 
-    // Connection.connect();
+    // Connection.connect(function (err) {
+    //     if (err) throw err;
+    //     console.log("DB Connected!");
+    // });
+
+    // module.exports = connection;
 
     // Connection.createQuery('select * from memberinfo', function(err, results, fields) {
     //     if (err) {
@@ -27,9 +32,10 @@ let test = async () => {
 
     // Connection.end();
 
-    let sql = 'SELECT * FROM memberinfo';
+    let sql = 'SELECT * FROM crew_info';
     let [rows,fields] = await db.query(sql);
     console.log(rows);
+
 
 };
 test();

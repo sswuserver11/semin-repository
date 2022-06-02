@@ -268,3 +268,27 @@ input[type=submit]{
     color:rgb(164, 164, 164);
     margin:10px 0px;
 }
+
+/* 회원가입 */
+.jointitle{
+    height: 40px;
+    text-align:center;
+    font-size: 40px;
+    font-weight: bold;
+}
+.totalTable{
+    width:35%;
+    margin: 0 auto;
+    border: hidden;
+}
+.inputs{
+    width:50%;
+    height:30px;
+    margin:auto;
+    display:block;
+}
+#submit_join{
+width:15%;
+margin:auto;
+display:block;
+}
