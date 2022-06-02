@@ -3,9 +3,10 @@ const dotenv = require('dotenv')
 
 dotenv.config({path: path.join(__dirname, './.env')})
 
+// require('dotenv').config();
 const mysql = require('mysql2/promise');
 
-async () => {
+let test = async () => {
     const db = mysql.createPool({
         host: process.env.DB_HOST,
         user: process.env.DB_USER,
@@ -15,5 +16,10 @@ async () => {
         waitForConnections: true,
         insecureAuth: true
     });
+
+    let sql = 'SELECT * FROM memberinfo';
+        let [rows, fields] = await db.query(sql);
+        console.log(rows);
 };
+test();
 

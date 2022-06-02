@@ -1,13 +1,13 @@
 const express = require("express"),
-layouts = require("express-ejs-layouts"),
-app = express(),
-router = require('express').Router(),
-homeController = require("./controllers/homeController"),
-memberSubmitController = require("./controllers/memberSubmitController"),
-errorController = require("./controllers/errorController"),
-db = require("./models/index"),
-    Sequelize = db.Sequelize,
-    Op=Sequelize.Op;
+    layouts = require("express-ejs-layouts"),
+    app = express(),
+    router = require('express').Router(),
+    homeController = require("./controllers/homeController"),
+    memberSubmitController = require("./controllers/memberSubmitController"),
+    errorController = require("./controllers/errorController"),
+    db = require("./models/index"),
+        Sequelize = db.Sequelize,
+        Op=Sequelize.Op;
 
 // db.sequelize.sync();
 //ejs를 템플릿용으로 사용
